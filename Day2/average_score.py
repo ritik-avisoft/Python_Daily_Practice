@@ -1,0 +1,5 @@
+f_score=input("your first score:- ")
+s_score=input("your second score:- ")
+t_score=input("your third score:- ")
+avg_Scr=int(f_score)+int(s_score)+int(t_score)
+print(avg_Scr/3)
