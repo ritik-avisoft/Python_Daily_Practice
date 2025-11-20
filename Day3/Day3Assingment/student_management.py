@@ -3,6 +3,8 @@ print("Welcome to Student Management System")
 student_name=[]
 student_grade=[]
 proceed='y'
+##2 and 3 pe edge cases handle karna hai if student list is invalid then before entring any choices it should show that there s no any student
+
 while proceed=='y':
     print('''
     Student Management Choices
@@ -11,8 +13,11 @@ while proceed=='y':
     3. Remove a Student from list
     4. display the record of all student 
     ''')
+
+    valid_grade=['A','B','C','D','E','F','a','b','c','d','e','f']
     choice=int(input("Enter Your Choice to manage Student:- "))
     # print("Student Name","   ","Student grade")
+    
     if choice<1 or choice>4:
         print("Wrong Choice !!! ")
     else:
@@ -21,18 +26,23 @@ while proceed=='y':
                 print("List is empty")
             else:
                 for st_name1, st_grade1 in zip(student_name,student_grade):#zip-> Use to aggrigate the elements from multiple iterables(list,tupples...)
-                    # print("Student Name","   ","Student grade")
                     print(st_name1,st_grade1)
           
+
         if choice==1:   #To Add new Student Record
             st_name,st_grade=input("Enter Student Name and Grade Saperated by Comma :- ").split(',')
             if st_name in student_name:
                 print("Multiple entry not allowed with same name...")
             else:
-                student_name.append(st_name)
-                student_grade.append(st_grade)
-                print("Added Successfully...")
+                
+                if st_grade not in valid_grade:
+                    print("Please Enter Valid Grade 'a-f'..... ")
+                else:
+                    student_name.append(st_name)
+                    student_grade.append(st_grade)
+                    print("Added Successfully...")
   
+
         if choice==2:   #To Edit Grade Of Existing Student
             print("Choose the Existing student to make changes... ")
             for st_name1, st_grade1 in zip(student_name,student_grade):
@@ -52,6 +62,7 @@ while proceed=='y':
                     student_grade[index]=new_grade
             else:
                 print("Student Not Exist in the List... ")
+
 
         if choice ==3:  #To Delete Existing Student Record
             print("Choose the Existing student to Delete... ")
