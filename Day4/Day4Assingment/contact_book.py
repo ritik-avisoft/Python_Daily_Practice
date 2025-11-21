@@ -74,7 +74,10 @@ while process.lower() == 'y':
 
         # Search by Contact Name
         if choice_for_search == 1:              
-            print("Available Names:- ",contacts.keys())
+            # print("Available Names:- ",contacts.keys())
+            print("Available Names...")
+            for nm in contacts.keys():
+                print("--> ", nm)
             name = input("Enter the Name to Search from the above menu... ")
             if name in contacts:
                 print(f"Details of {name}:")
@@ -140,7 +143,9 @@ while process.lower() == 'y':
 
     #Update Detail's
     elif choice_of_action == 3:              
-        print("Available Names:- ",contacts.keys())
+        # print("Available Names:- ",contacts.keys())
+        
+        
         name = input("Enter contact name to update: ")
 
         if name in contacts:

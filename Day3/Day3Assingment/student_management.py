@@ -23,7 +23,7 @@ while proceed=='y':
     else:
         if choice==4:   #To Display all the Existing Student's Data
             if not student_name:
-                print("List is empty")
+                print("No Student Exists !!")
             else:
                 for st_name1, st_grade1 in zip(student_name,student_grade):#zip-> Use to aggrigate the elements from multiple iterables(list,tupples...)
                     print(st_name1,st_grade1)
