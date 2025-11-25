@@ -44,10 +44,6 @@ account2_user = "Raj Sharma"            #user for account2
 account3_user = "Anita Ranjan"          #user for account3
 ''')
 
-
-# input_acc_user = input("Enter the account holder name to access your account: ")
-
-
 past_transaction =[]
 trans_flag=True
 proceed = 'yes'
@@ -117,7 +113,7 @@ while proceed.lower() == 'yes':
         else:
             print("❌ Invalid action selected.")
     else:
-        print("❌ Unauthorized access to account!!")
+        print("❌ Unauthorized access to a`ccount!!")
         trans_flag=False
         break
     
