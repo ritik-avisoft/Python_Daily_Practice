@@ -14,4 +14,4 @@ sum_of_all_sub=sub1+sub2+sub3
 percentage =( sum_of_all_sub/300) *100
 
 print(percentage)
-         
+    

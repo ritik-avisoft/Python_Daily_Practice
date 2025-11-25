@@ -11,17 +11,17 @@ Choose operation:
 4. Divide
 5. Square
 ''')
-ope=(int(input("Which operation you want to perform :- ")))
+operation=(int(input("Which operation you want to perform :- ")))
 
-if ope==1:
+if operation==1:
     print(first_num + second_num)
-elif ope==2:
+elif operation==2:
     print(first_num - second_num)
-elif ope==3:
+elif operation==3:
     print(first_num * second_num)
-elif ope==4:
+elif operation==4:
     print(first_num / second_num)
-elif ope==5:
+elif operation==5:
     print(first_num ** second_num)
 else:
     print("INVALID INPUT")
