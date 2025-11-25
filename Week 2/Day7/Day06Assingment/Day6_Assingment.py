@@ -32,6 +32,28 @@ class BankAccount:
     def check_balance(self):
         print(f"✅ Current Balance: ₹{self.balance}")
 
+
+def list_of_action(input_acc_user):
+    print(f"✅ Access granted to {input_acc_user}'s account.")
+    print('''\nwhich action you want to perform?
+        1. Withdraw Amout
+        2. Deposit Money
+        3. Check Balance''')
+    action = input("Enter the action number (1/2/3): ")
+    if action == '1':
+        amount = float(input("Enter amount to withdraw: "))
+        account1.withdraw(amount)
+        
+    elif action == '2':
+        amount = float(input("Enter amount to deposit: "))
+        account1.deposit(amount)
+        
+    elif action == '3':
+        account1.check_balance()
+        past_transaction.append(f"Balanced Check ")
+    else:
+        print("❌ Invalid action selected.")
+
 # Creating 3 customer accounts
 account1 = BankAccount("1230001801","Ritik kr Ranjan", 1000)
 account2 = BankAccount("1230001802","Raj Sharma", 500)
@@ -51,67 +73,11 @@ proceed = 'yes'
 while proceed.lower() == 'yes':
     input_acc_user = input("Enter the account holder name to access your account: ")
     if input_acc_user == "Ritik kr Ranjan":
-        print(f"✅ Access granted to {input_acc_user}'s account.")
-        print('''\nwhich action you want to perform?
-            1. Withdraw Amout
-            2. Deposit Money
-            3. Check Balance''')
-        action = input("Enter the action number (1/2/3): ")
-        if action == '1':
-            amount = float(input("Enter amount to withdraw: "))
-            account1.withdraw(amount)
-            
-        elif action == '2':
-            amount = float(input("Enter amount to deposit: "))
-            account1.deposit(amount)
-            
-        elif action == '3':
-            account1.check_balance()
-            past_transaction.append(f"Balanced Check ")
-        else:
-            print("❌ Invalid action selected.")
-
+        list_of_action(input_acc_user) #Calling the function to perform action for input_acc_user
     elif input_acc_user == "Raj Sharma":
-        print(f"✅ Access granted to {input_acc_user}'s account.")
-        print('''\nwhich action you want to perform?
-            1. Withdraw Amout
-            2. Deposit Money
-            3. Check Balance''')
-        action = input("Enter the action number (1/2/3): ")
-        if action == '1':
-            amount = float(input("Enter amount to withdraw: "))
-            account1.withdraw(amount)
-            
-        elif action == '2':
-            amount = float(input("Enter amount to deposit: "))
-            account1.deposit(amount)
-            
-        elif action == '3':
-            account1.check_balance()
-            past_transaction.append(f"Balanced Check ")
-        else:
-            print("❌ Invalid action selected.")
-
+        list_of_action(input_acc_user)
     elif input_acc_user == "Anita Ranjan":
-        print(f"✅ Access granted to {input_acc_user}'s account.")
-        print('''\nwhich action you want to perform?
-            1. Withdraw Amout
-            2. Deposit Money
-            3. Check Balance''')
-        action = input("Enter the action number (1/2/3): ")
-        if action == '1':
-            amount = float(input("Enter amount to withdraw: "))
-            account1.withdraw(amount)
-            
-        elif action == '2':
-            amount = float(input("Enter amount to deposit: "))
-            account1.deposit(amount)
-            
-        elif action == '3':
-            account1.check_balance()
-            past_transaction.append(f"Balanced Check ")
-        else:
-            print("❌ Invalid action selected.")
+        list_of_action(input_acc_user)
     else:
         print("❌ Unauthorized access to a`ccount!!")
         trans_flag=False
@@ -119,17 +85,16 @@ while proceed.lower() == 'yes':
     
     proceed = input("Do you want to perform another transaction? (yes/no): ")
 
-print("\n🧾 Transaction History:")
-if trans_flag:
-    for transaction in past_transaction:
-        print(f"- {transaction}")
-else:
-    print("No Transaction's")
-    print("Try With Correct Banking Detail's.. ")
+# print("\n🧾 Transaction History:")
+# if trans_flag:
+#     for transaction in past_transaction:
+#         print(f"- {transaction}")
+# else:
+#     print("No Transaction's")
+#     print("Try With Correct Banking Detail's.. ")
 
 print("\nThank you for banking with us! Have a great day! 😊")
     
-
 
 
 
