@@ -1,66 +1,4 @@
-'''
-## 🎯 **Assignment Goal**
-Create a small Course Management System using **OOP concepts** like:
-* Inheritance
-* Method overriding
-* `super()`
-* Class variable vs instance variable
-### 🔹 **Step 1: Make a Parent Class**
-Create a class called **Course**.
-This class should have:
-* course_name  (instance variable)
-* instructor   (instance variable)
-* duration     (instance variable)
-* platform = "SkillUp" (class variable — same for all courses)
-
-Methods required:
-
-* **display_details()** → show course information
-* **update_duration(new_duration)** → change course duration
-
----
-
-### 🔹 **Step 2: Make Child Classes**
-
-Create **two classes that inherit from Course**, for example:
-
-* ProgrammingCourse
-* DesignCourse
-
-These classes:
-
-* Should have **extra attributes**, unique for the course type (example: programming language, software used, difficulty level, etc.)
-* Must **override the display_details() method**
-* Must use **super()** to reuse parent class code
-
----
-
-### 🔹 **Step 3: Test the Program**
-
-Do the following in your main code:
-
-✔ Create **multiple objects** of both child classes
-✔ Call methods from both **parent and child classes**
-✔ Update some values (like duration) and print results again
-✔ Show that **class variable (platform name)** is shared by all objects
-  → Example: changing Course.platform affects all courses
-
----
-
-## 💡 Final Output Expectations (in simple words)
-
-Your output should clearly show:
-
-| Concept            | Shown by                                       |
-| ------------------ | ---------------------------------------------- |
-| Inheritance        | child classes using parent properties          |
-| Method overriding  | child modifies display_details()               |
-| super()            | child calls parent method                      |
-| Class variable     | platform same for all courses                  |
-| Instance variables | name, instructor, duration stored individually |
-
-'''
-
+# Online Course System 
 class Course:
     plateform = "AviSkill"  # Class variable Same for all courses
     def __init__(self, course_name, instructor, duration):
@@ -76,7 +14,11 @@ class Course:
 
     def update_duration(self, new_duration):
         self.duration = new_duration
-        print(f"Duration updated to {self.duration} hours for {self.course_name}")
+        print("=="*40)
+        print(f"\nDuration updated to {self.duration} months for {self.course_name}🥳🎊")
+        print("=="*40)
+    def all_courses_on_platform(self):
+        print(f"🎉 The course '{self.course_name}' is available on the '{Course.plateform}' platform.")
 
 class ProgrammingCourses(Course):
     def __init__(self, course_name, instructor, duration, programming_language, difficulty_level):
@@ -100,52 +42,137 @@ class DesignCourses(Course):
         print(f"Software Used: {self.software_used}")
         print(f"Difficulty Level: {self.difficulty_level}")
 
+    
 #Demonstration of the classes and methods
 prog_course1 = ProgrammingCourses("Python Basics", "Ritik kr Ranjan", 3, "Python", "Beginner")
 design_course1 = DesignCourses("Graphic Design", "Harshit", 4, "Adobe Photoshop", "Intermediate")
 prog_course2 = ProgrammingCourses("Advanced Java", "Karunesh", 5, "Java", "Advanced")
 design_course2 = DesignCourses("UI/UX Design", "Raj", 6, "Figma", "Advanced")
 
-# Displaying details
-print("\nDisplaying the details for all courses:")
-print("=="*22)
-print("\nProgramming Course 1 Details:")
-print("--"*15)
-prog_course1.display_details()
-print("\nDesigning Course 1 Details:")
-print("--"*15)
-design_course1.display_details()
-print("\nProgramming Course 2 Details:")
-print("--"*15)
-prog_course2.display_details()
-print("\nDesigning Course 2 Details:")
-print("--"*15)
-design_course2.display_details()
-print("\n")
+# print(prog_course1.course_name)
+# prog_course1.display_details()
 
-# Updating duration
-print("\nUpdating Duration for courses...")
-print("=="*15)
-prog_course1.update_duration(11)
-design_course1.update_duration(10)
-print("--"*15)
-print("After Updating Duration:")
-print("--"*15)
-prog_course1.display_details()
-print("--"*15)
-design_course1.display_details()
+#managing the list of object to print all at a time
+course_type_list=[prog_course1,design_course1,prog_course2,design_course2]
+# for i in course_type_list:
+#     name_of_course=i.course_name
+#     print(name_of_course)
+print("=="*40)
+print("🥳🥳Welcome to Your  Course management Plateform :- ")
+print("=="*40)
+proceed='y'
+while proceed=='y':
+    print("What type of action you want to perform?")
+    print("1. Add New Course")
+    print("2. Update Existing Course Duration")
+    print("3. Display Course Details")
+    print("4. Check the shared class variable thorugh changing the plateform name")
+    print(f"5. All the courses are on the {Course.plateform} platform:- ") 
+    print("--"*40)
+    action=int(input("\nEnter the action number (1/2/3/4/5):- "))
+    # print("--"*40)
+    if action>5 or action<1:
+        print("Invalid Action Selected!!")
+        continue
+    if action==1:
+        #Taking input for the object creation
+        print("=="*40)
+        course_type=int(input("Enter the type of course you want to add (1) programming (2) design:- "))
+        print("=="*40)
+        if (course_type ==1 or course_type==2):   # handled isDigit with the help of chatGPT
+            course_name=input("Enter the course name:- ")
+            while any(char.isdigit() for char in course_name):
+                print("course name should not contain numbers.")
+                course_name = input("Enter the course name name again:- ")
+            instructor = input("Enter the instructor name:- ")
+            while any(char.isdigit() for char in instructor):
+                print("Instructor name should not contain numbers.")
+                instructor = input("Enter the instructor name again:- ")
+            while True:
+                duration_input = input("Enter the duration in months:- ")
+                if duration_input.isdigit():      
+                    duration = int(duration_input)
+                    break                         
+                else:
+                    print("❌❌Invalid input! Duration must be an integer. Try again.")
+            if course_type==1:
+                valid_prog_lang=['java','pyhton','c++','js','sql','go','php','r']
+                programming_language=input("Enter the programming language(java/python/c++/js/sql/go/php/r)):-  ")
+                while programming_language not in valid_prog_lang:
+                    print("Please enter Valid Language Again (java/python/c++/js/sql/go/php/r)")
+                    programming_language=input("Enter the programming language(java/python/c++/js/sql/go/php/r)):-  ")
 
-# Showing class variable is shared
-print("=="*20)
-Course.plateform = "R's Academy"
+                valid_levels = ["Beginner", "Intermediate", "Advanced"]
+                difficulty_level = input("Enter the difficulty level (Beginner/Intermediate/Advanced):- ")
+                while difficulty_level not in valid_levels:
+                    print("Invalid input! Difficulty level must be Beginner / Intermediate / Advanced only.")
+                    difficulty_level = input("Enter the difficulty level again:- ")
+                new_course=ProgrammingCourses(course_name, instructor, duration, programming_language, difficulty_level) #Creating object
+                course_type_list.append(new_course)
+                # course_name_list.append(course_name)
+                print("=="*40)
+                print("\nNew Programming Course Added Successfully!🥳🎊")
+                print("=="*40)
+                new_course.display_details()
+            elif course_type==2:
+                software_used=input("Enter the software used:- ")
+                while any(char.isdigit() for char in course_name):
+                    print("Software name should not contain numbers.")
+                    course_name = input("Enter the Software used name again:- ")
 
+                valid_levels = ["Beginner", "Intermediate", "Advanced"]
+                difficulty_level = input("Enter the difficulty level (Beginner/Intermediate/Advanced):- ")
+                while difficulty_level not in valid_levels:
+                    print("Invalid input! Difficulty level must be Beginner / Intermediate / Advanced only.")
+                    difficulty_level = input("Enter the difficulty level again:- ")
 
-print("\nChanging platform name for all courses...")
-print("\nAfter Changing Course 1 Platform Name:")
-print("--"*15)
-prog_course1.display_details()
-print("\nAfter Changing Course 2 Platform Name:")
-print("--"*15)
-design_course1.display_details()
-    
-            
+                new_course=DesignCourses(course_name, instructor, duration, software_used, difficulty_level) #Creating object
+                course_type_list.append(new_course)
+                # course_name_list.append(course_name)
+                print("=="*40)
+                print("\nNew Designing Course Added Successfully!🥳🎊")
+                print("=="*40)
+                new_course.display_details()
+            else:
+                print("❌❌Invalid course type entered!")
+        else:
+            print("😬Only Valid Course Types Are allowed (1 / 2) !!")
+    elif action==2:
+        course_name=input("\nEnter the course name to update duration:- ")
+        found =False
+        for course in course_type_list:
+            in_list=course.course_name
+            if in_list==course_name:
+                new_duration=input(f"Enter the new Duration for the course {course_name}:- ")
+                course.update_duration(new_duration)
+                found=True
+                break
+        if not found:
+                print("Course not found")
+
+    elif action==3:
+        course_name=input("\nEnter the course name to display details:- ")
+        flag = False
+        for course in course_type_list:
+            course
+            in_list=course.course_name
+            if in_list==course_name:
+                print("\n")
+                course.display_details()
+                flag=True
+                break
+                #handle edge case
+        if not flag:
+                print("Invalid Course Name")
+    elif action==4:
+        new_plateform=input("\nEnter the new platform name to update for all courses:- ")
+        Course.plateform=new_plateform
+        print(f"\nPlatform name updated to {Course.plateform} for all courses.🎊🥳")
+    elif action==5:
+        print("All courses ")
+        print("=="*8)
+        for course in course_type_list:
+            # print("\n")
+            course.all_courses_on_platform()
+
+    proceed=input("\nwant to proceed (y/n):- ")
