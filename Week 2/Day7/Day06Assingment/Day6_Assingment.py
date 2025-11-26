@@ -1,6 +1,7 @@
 # BankAccount 
 
 class BankAccount:
+    """this calss hld the rec of bank acc""" # this is the doc for the bankAc cls
     def __init__(self, account_number, account_holder_name, balance=0):     #Everytime when i create an object(Account holder for this bank) this __init__ method call automatically to put the details for the acc holder with exactely valid parameter's.
 
         self.account_number = account_number
@@ -66,6 +67,11 @@ account2_user = "Raj Sharma"            #user for account2
 account3_user = "Anita Ranjan"          #user for account3
 ''')
 
+# Class Attributes -> 
+# print(BankAccount.__base__)
+# print(BankAccount.__bases__)
+# print(BankAccount.__doc__) # hold the doc's for any cls 
+# print(BankAccount.__dict__)
 past_transaction =[]
 trans_flag=True
 proceed = 'yes'
@@ -96,5 +102,15 @@ while proceed.lower() == 'yes':
 print("\nThank you for banking with us! Have a great day! 😊")
     
 
+
+
+
+
+'''
+Area of improvement :- 
+-> while depositing amt only int is acceptable , but right now while giving input rather than int it;s giving err which is not understandable for user 
+-> same for withdrawl only accept int value
+
+'''
 
 
