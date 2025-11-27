@@ -80,8 +80,8 @@ while proceed=='y':
         course_type=int(input("Enter the type of course you want to add (1) programming (2) design:- "))
         print("=="*40)
         if (course_type ==1 or course_type==2):   # handled isDigit with the help of chatGPT
-            course_name=input("Enter the course name:- ")
-            while any(char.isdigit() for char in course_name):
+            course_name=input("Enter the course name:- ")  
+            while any(char.isdigit() for char in course_name):      # define a method for similar tsks 
                 print("course name should not contain numbers.")
                 course_name = input("Enter the course name name again:- ")
             instructor = input("Enter the instructor name:- ")
