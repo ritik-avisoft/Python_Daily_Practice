@@ -1,0 +1,155 @@
+✅ ANSI Escape Codes for Text Formatting
+
+## 🔹 BASIC FORMAT SYNTAX
+
+```python
+\033[<code>mYour Text\033[0m
+```
+
+* `\033[` → start formatting
+* `<code>` → style number
+* `m` → apply
+* `\033[0m` → reset
+
+---
+
+## 🎨 TEXT STYLES
+
+| Code | Effect               |
+| ---- | -------------------- |
+| 0    | Reset all formatting |
+| 1    | Bold                 |
+| 2    | Dim                  |
+| 3    | Italic               |
+| 4    | Underline            |
+| 5    | Blink (slow)         |
+| 6    | Rapid blink          |
+| 7    | Reverse colors       |
+| 8    | Hidden               |
+| 9    | Strikethrough        |
+
+---
+
+## 🖍 FOREGROUND (TEXT) COLORS
+
+| Code | Color               |
+| ---- | ------------------- |
+| 30   | Black               |
+| 31   | Red                 |
+| 32   | Green               |
+| 33   | Yellow              |
+| 34   | Blue                |
+| 35   | Magenta             |
+| 36   | Cyan                |
+| 37   | White               |
+| 90   | Bright Black (Gray) |
+| 91   | Bright Red          |
+| 92   | Bright Green        |
+| 93   | Bright Yellow       |
+| 94   | Bright Blue         |
+| 95   | Bright Magenta      |
+| 96   | Bright Cyan         |
+| 97   | Bright White        |
+
+---
+
+## 🎨 BACKGROUND COLORS
+
+| Code | Background     |
+| ---- | -------------- |
+| 40   | Black          |
+| 41   | Red            |
+| 42   | Green          |
+| 43   | Yellow         |
+| 44   | Blue           |
+| 45   | Magenta        |
+| 46   | Cyan           |
+| 47   | White          |
+| 100  | Bright Black   |
+| 101  | Bright Red     |
+| 102  | Bright Green   |
+| 103  | Bright Yellow  |
+| 104  | Bright Blue    |
+| 105  | Bright Magenta |
+| 106  | Bright Cyan    |
+| 107  | Bright White   |
+
+---
+
+# ✅ Examples in Python
+
+### Bold
+
+```python
+print("\033[1mBold Text\033[0m")
+```
+
+### Underline
+
+```python
+print("\033[4mUnderlined Text\033[0m")
+```
+
+### Red Text
+
+```python
+print("\033[31mRed Text\033[0m")
+```
+
+### Yellow Background + Blue Text
+
+```python
+print("\033[44;33mStylish Text\033[0m")
+```
+
+### Bold + Underline + Green
+
+```python
+print("\033[1;4;32mImportant\033[0m")
+```
+
+---
+
+# 🧪 Cheat Sheet Combination Format
+
+```python
+\033[STYLE;TEXTCOLOR;BACKGROUNDmText\033[0m
+```
+
+Example:
+
+```python
+print("\033[1;31;47mAlert Message\033[0m")
+```
+
+Bold Red text on White background
+
+---
+
+## 🚨 Reset Codes
+
+| Code | Effect              |
+| ---- | ------------------- |
+| 0    | Reset everything    |
+| 21   | Reset bold          |
+| 22   | Reset bold/dim      |
+| 23   | Reset italic        |
+| 24   | Reset underline     |
+| 25   | Reset blink         |
+| 27   | Reset reverse       |
+| 28   | Reset hidden        |
+| 29   | Reset strikethrough |
+
+---
+
+# ✅ Ultra Quick Reference
+
+| Want             | Code       |
+| ---------------- | ---------- |
+| Bold             | `\033[1m`  |
+| Underline        | `\033[4m`  |
+| Italic           | `\033[3m`  |
+| Red Text         | `\033[31m` |
+| Green Background | `\033[42m` |
+| Reset            | `\033[0m`  |
+

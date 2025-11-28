@@ -6,6 +6,10 @@ class Course:
         self.instructor = instructor    
         self.duration = int(duration)  # in months
 
+    # @classmethod  # we can change the class variable by @classmethod  Decorator
+    # def get_update_cls_variable(cls,new_name):
+    #     cls.plateform=new_name
+
     def display_details(self):
         print(f"Course Name: {self.course_name}")
         print(f"Instructor: {self.instructor}")
@@ -149,7 +153,6 @@ while proceed=='y':
                 break
         if not found:
                 print("Course not found")
-
     elif action==3:
         course_name=input("\nEnter the course name to display details:- ")
         flag = False
@@ -166,10 +169,11 @@ while proceed=='y':
                 print("Invalid Course Name")
     elif action==4:
         new_plateform=input("\nEnter the new platform name to update for all courses:- ")
-        Course.plateform=new_plateform
+        Course.plateform=new_plateform  #earlier we are accessing the class variable to modify the variable 
         print(f"\nPlatform name updated to {Course.plateform} for all courses.🎊🥳")
     elif action==5:
         print("All courses ")
+        # print(Course.get_update_cls_variable("New Classes"))
         print("=="*8)
         for course in course_type_list:
             # print("\n")

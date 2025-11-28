@@ -1,7 +1,7 @@
 #geting user details and handling exceptions by import from exception_handled.py
 from exception_handled import InvalidAgeError, InvalidFavoriteNumberError, NameContainsNumberError
 def get_user_details():
-        while True:
+        while True:     # storage method , we need to store the right value.
             try:
                 name = input("Enter your name: ")
                 #name validation must not contains any number's its cant be Empty 
@@ -50,7 +50,7 @@ def safe_division(favorite_number):
 def read_file():
     file = input("Enter the filename to read: ")
     try:
-        if file.lower().strip() == "secretfile.txt":
+        if file.lower().strip() == "secret1.txt":
             raise PermissionError("Access to this file is denied.")
         
         with open(file, 'r') as f:
@@ -59,10 +59,12 @@ def read_file():
             print("--" * 20)
             print(content)
             print("--" * 20)
+            
     except FileNotFoundError:
-        print("Error: The file does not exist.")
+        print("Custom_Error: The file does not exist.")
     except PermissionError:
-        print("Error: You do not have permission to read this file.")
+        print("Custom_Error: You do not have permission to read this file.")
     
     finally:
         print("File operation complete.")
+        
