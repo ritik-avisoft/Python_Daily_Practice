@@ -1,6 +1,6 @@
 import re
 def word_presence_checker(sentence, target_word):
-    pattern = r'\b' + re.escape(target_word) + r'\b' # Pattern to match the target word as a standalone word
+    pattern = r'(?<!\S)' + re.escape(target_word) + r'(?!\S)' # Pattern to match the target word as a standalone word
     if re.search(pattern, sentence, re.IGNORECASE):
         return True
     else:
@@ -28,11 +28,11 @@ def clean_messy_text(messy_text):
     # Remove special characters except spaces and alphanumeric characters
     cleaned_text = re.sub(r'[^A-Za-z0-9\s]', '', messy_text)
     # Collapse multiple spaces into a single space
-    cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
+    # cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
     return cleaned_text.strip().lower()
 
 def validate_email_format(email):
-    pattern = r'^[A-Za-z0-9][A-Za-z0-9._%+-]*@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'
+    pattern = r'^[A-Za-z0-9]+[A-Za-z0-9_%+-]*@[mail]+\.[A-Za-z]{2,}$'
     if re.match(pattern, email):
         return "\033[42mValid email format\033[0m"
     else:
