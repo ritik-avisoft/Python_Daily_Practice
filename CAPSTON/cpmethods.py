@@ -133,9 +133,15 @@ def add_new_product(inventory, name, category, price, quantity):
     return inventory, product_id
 # To save the inventory data 
 def save_inventory_data(file_path, inventory):
-    with open(file_path, 'w') as file:
-        json.dump(inventory, file, indent=4)
-    logging.info("Inventory data saved successfully.")
+    try:
+        with open(file_path, 'w') as file:
+            json.dump(inventory, file, indent=4)
+        logging.info("Inventory data saved successfully.")
+
+    except Exception as e:
+        logging.error(f"Failed to save inventory data: {e}")
+        print(f"❌ Error: Could not save inventory data. {e}")
+
 # To update product quantity
 def update_product_quantity(inventory, product_id, quantity_change):
     if product_id not in inventory:
