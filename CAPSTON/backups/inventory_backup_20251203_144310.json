@@ -1,0 +1,100 @@
+{
+    "1001": {
+        "name": "apple",
+        "category": "food",
+        "price": 50.0,
+        "quantity": 50,
+        "last_restock_date": "2025-12-02 12:12:31"
+    },
+    "1002": {
+        "name": "kela",
+        "category": "food",
+        "price": 20.0,
+        "quantity": 2,
+        "last_restock_date": "2025-12-02 11:26:52"
+    },
+    "1003": {
+        "name": "hoodie",
+        "category": "cloths",
+        "price": 250.0,
+        "quantity": 8,
+        "last_restock_date": "2025-12-02 11:36:36"
+    },
+    "1004": {
+        "name": "macbook air m1",
+        "category": "laptop",
+        "price": 86000.0,
+        "quantity": 38,
+        "last_restock_date": "2025-12-02 17:01:37"
+    },
+    "1005": {
+        "name": "macbook m2",
+        "category": "laptop",
+        "price": 120000.0,
+        "quantity": 15,
+        "last_restock_date": "2025-12-02 12:06:36"
+    },
+    "1006": {
+        "name": "iphone17",
+        "category": "SmartPhone",
+        "price": 75000.0,
+        "quantity": 50,
+        "last_restock_date": "2025-12-02 14:59:18"
+    },
+    "1009": {
+        "name": "ring",
+        "category": "accessories",
+        "price": 90000.0,
+        "quantity": 5,
+        "last_restock_date": "2025-12-02 16:12:53"
+    },
+    "1010": {
+        "name": "headphone",
+        "category": "music",
+        "price": 2999.0,
+        "quantity": 20,
+        "last_restock_date": "2025-12-02 16:17:08"
+    },
+    "1011": {
+        "name": "apple",
+        "category": "fruits",
+        "price": 50.0,
+        "quantity": 20,
+        "last_restock_date": "2025-12-02 16:56:29"
+    },
+    "1012": {
+        "name": "apple pro",
+        "category": "smartphone",
+        "price": 95000.0,
+        "quantity": 8,
+        "last_restock_date": "2025-12-02 17:43:12"
+    },
+    "1013": {
+        "name": "mac",
+        "category": "lap",
+        "price": 10000.0,
+        "quantity": 0,
+        "last_restock_date": "2025-12-02 17:45:11"
+    },
+    "1014": {
+        "name": "hp victus",
+        "category": "laptop",
+        "price": 65000.0,
+        "quantity": 50,
+        "last_restock_date": "2025-12-03 12:11:56"
+    },
+    "1015": {
+        "name": "lenovo ideapad",
+        "category": "tablet",
+        "price": 23000.0,
+        "quantity": 5,
+        "last_restock_date": "2025-12-03 12:14:31"
+    },
+    "1016": {
+        "name": "hp 15s",
+        "category": "laptop",
+        "price": 56000.0,
+        "quantity": 0,
+        "last_restock_date": "2025-12-03 14:36:17"
+    }
+}

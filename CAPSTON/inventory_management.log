@@ -1,0 +1,31 @@
+2025-12-03 14:34:49,796 - INFO - Inventory data saved successfully.
+2025-12-03 14:34:49,803 - INFO - New product added successfully: 1016 - hp 15s
+2025-12-03 14:36:17,315 - INFO - Inventory data saved successfully.
+2025-12-03 14:36:17,320 - INFO - Updated product ID 1016 quantity by 10. New quantity: 20
+2025-12-03 14:36:52,201 - INFO - Inventory data saved successfully.
+2025-12-03 14:36:52,209 - INFO - Updated product ID 1016 quantity by -20. New quantity: 0
+2025-12-03 14:38:28,202 - INFO - Searched for products with term: laptop. Found 4 results.
+2025-12-03 14:38:49,653 - INFO - Searched for products with term: 1090. Found 0 results.
+2025-12-03 14:38:49,655 - INFO - Attempted to display empty inventory.
+2025-12-03 14:40:16,219 - WARNING - Low stock items detected: 7 items below threshold.
+2025-12-03 14:40:16,220 - WARNING - Out of stock items detected: 2 items are out of stock.
+2025-12-03 14:40:16,220 - INFO - Generated inventory report sucessfully.
+2025-12-03 14:41:38,024 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144138.json.
+2025-12-03 14:42:40,140 - INFO - Running scheduled backup...
+2025-12-03 14:42:40,143 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144240.json.
+2025-12-03 14:42:45,165 - INFO - Running scheduled backup...
+2025-12-03 14:42:45,169 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144245.json.
+2025-12-03 14:42:50,190 - INFO - Running scheduled backup...
+2025-12-03 14:42:50,191 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144250.json.
+2025-12-03 14:42:55,211 - INFO - Running scheduled backup...
+2025-12-03 14:42:55,214 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144255.json.
+2025-12-03 14:43:00,247 - INFO - Running scheduled backup...
+2025-12-03 14:43:00,249 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144300.json.
+2025-12-03 14:43:05,271 - INFO - Running scheduled backup...
+2025-12-03 14:43:05,276 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144305.json.
+2025-12-03 14:43:10,298 - INFO - Running scheduled backup...
+2025-12-03 14:43:10,302 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144310.json.
+2025-12-03 14:43:15,326 - INFO - Running scheduled backup...
+2025-12-03 14:43:15,327 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144315.json.
+2025-12-03 14:43:20,351 - INFO - Running scheduled backup...
+2025-12-03 14:43:20,354 - INFO - Inventory data backed up successfully to /Users/ritikkumarranjan/PythonLearningRRcopy/Python_Daily_Practice/CAPSTON/backups/inventory_backup_20251203_144320.json.
